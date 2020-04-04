@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="dev.manolovn.merging2packages.Merging2PackagesTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2020-03-31T22:11:33" hostname="MacBook-Pro-de-it.local" time="0.005">
-  <properties/>
-  <testcase name="test[0: getIndicesOfItemWeights([I@4865cb84,21)=[I@46419703]" classname="dev.manolovn.merging2packages.Merging2PackagesTest" time="0.003"/>
-  <testcase name="test[1: getIndicesOfItemWeights([I@5d5aab64,1)=[I@17e9c643]" classname="dev.manolovn.merging2packages.Merging2PackagesTest" time="0.0"/>
-  <testcase name="test[2: getIndicesOfItemWeights([I@3a1d8213,1)=[I@2a142797]" classname="dev.manolovn.merging2packages.Merging2PackagesTest" time="0.0"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
