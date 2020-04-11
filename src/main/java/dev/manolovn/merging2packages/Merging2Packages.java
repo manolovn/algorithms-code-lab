@@ -6,7 +6,7 @@ import java.util.Map;
 public class Merging2Packages {
 
     public int[] getIndicesOfItemWeights(int[] arr, int limit) {
-        Map<Integer, Integer> map = new HashMap<Integer, Integer>();
+        Map<Integer, Integer> map = new HashMap<>();
         for ( int i = 0; i < arr.length; i++ ) {
             if (map.containsKey(arr[i])) {
                 return new int[]{ i, map.get(arr[i]) };
