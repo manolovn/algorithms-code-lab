@@ -13,7 +13,7 @@ import static org.junit.Assert.assertEquals;
 @RunWith(Parameterized.class)
 public class AwardBudgetCutsTest {
 
-    @Parameters(name = "{index}: findGrantsCap({0})={1}")
+    @Parameters(name = "{index}: findGrantsCap({0},{1})={2}")
     public static Collection<Object[]> data() {
         return Arrays.asList(new Object[][]{
                 {new double[]{2, 4}, 3, 1.5},
