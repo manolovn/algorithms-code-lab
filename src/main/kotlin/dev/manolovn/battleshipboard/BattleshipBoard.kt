@@ -9,8 +9,8 @@ object BattleshipBoard {
         the not modifying input requirement but we also need to think that space complexity must be O(1)
         - the statement says that we should do only one pass and reviewing the conditions of how the ships
         are drawn we could use a "greedy" approach where a ship is defined by a cell with "X" and neighbours
-        distinct of "X". That's approach is valid because the ships only could be in horizontal or vertical
-        orientation
+        distinct of "X". That approach is valid because the ships only could be in horizontal or vertical
+        orientation.
 
          Time : O(N*M) ; where N and M are the dimensions of the matrix
         Space : O(1)   ; no extra data structure is needed
