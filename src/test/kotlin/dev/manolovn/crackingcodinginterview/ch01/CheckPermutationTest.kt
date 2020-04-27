@@ -20,7 +20,7 @@ class CheckPermutationTest(
 
     companion object {
         @JvmStatic
-        @Parameters(name = "{index}: arePermutations({0})={1}")
+        @Parameters(name = "{index}: arePermutations({0},{1})={2}")
         fun data(): Collection<Array<Any>> {
             return listOf(
                 arrayOf("abc", "bca", true),
