@@ -17,7 +17,7 @@ object CheckPermutation {
      * in that way we could know when the input Strings are permutations: only when they have the same
      * char frequency distribution
      *
-     * Time:  O(n) ; because we use 3 loops O(n) + O(n) = O(n)
+     * Time:  O(n) ; because we use 2 loops O(n) + O(n) = O(n)
      * Space: O(1) ; because the space is constant
      *
      * (2) Another alternative should be to sort the input and compare in one loop character by character. But
