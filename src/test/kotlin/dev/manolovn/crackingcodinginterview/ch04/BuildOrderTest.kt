@@ -1,5 +1,6 @@
 package dev.manolovn.crackingcodinginterview.ch04
 
+import dev.manolovn.crackingcodinginterview.ch04.BuildOrder.Project
 import dev.manolovn.crackingcodinginterview.ch04.BuildOrder.getBuildOrderForProjects
 import org.junit.Assert.assertArrayEquals
 import org.junit.Test

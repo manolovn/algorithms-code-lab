@@ -43,6 +43,6 @@ object RouteBetweenNodes {
         }
         return false
     }
-}
 
-class Node(var children: Array<Node> = emptyArray())
+    class Node(var children: Array<Node> = emptyArray())
+}

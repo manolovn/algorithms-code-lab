@@ -1,6 +1,6 @@
 package dev.manolovn.crackingcodinginterview.ch04
 
-import dev.manolovn.crackingcodinginterview.ch04.Project.State
+import dev.manolovn.crackingcodinginterview.ch04.BuildOrder.Project.State
 import java.lang.Exception
 import java.util.*
 import kotlin.collections.HashMap
@@ -68,43 +68,44 @@ object BuildOrder {
             stack.push(project)
         }
     }
-}
 
-class Graph {
-    val nodes = ArrayList<Project>()
-    val map = HashMap<String, Project>()
 
-    fun getOrCreate(name: String): Project {
-        if (!map.containsKey(name)) {
-            val node = Project(name)
-            nodes.add(node)
-            map[name] = node
+    class Graph {
+        val nodes = ArrayList<Project>()
+        val map = HashMap<String, Project>()
+
+        fun getOrCreate(name: String): Project {
+            if (!map.containsKey(name)) {
+                val node = Project(name)
+                nodes.add(node)
+                map[name] = node
+            }
+            return map[name]!!
         }
-        return map[name]!!
+
+        fun addEdge(startName: String, endName: String) {
+            val start = getOrCreate(startName)
+            val end = getOrCreate(endName)
+            start.addDependant(end)
+        }
     }
 
-    fun addEdge(startName: String, endName: String) {
-        val start = getOrCreate(startName)
-        val end = getOrCreate(endName)
-        start.addDependant(end)
-    }
-}
+    class Project(val name: String) {
+        enum class State {
+            NOT_VISITED,
+            VISITING,
+            VISITED
+        }
 
-class Project(val name: String) {
-    enum class State {
-        NOT_VISITED,
-        VISITING,
-        VISITED
-    }
+        var state = State.NOT_VISITED
+        val children = ArrayList<Project>()
+        val map = HashMap<String, Project>()
 
-    var state = State.NOT_VISITED
-    val children = ArrayList<Project>()
-    val map = HashMap<String, Project>()
-
-    fun addDependant(project: Project) {
-        if (!map.containsKey(project.name)) {
-            children.add(project)
-            map[project.name] = project
+        fun addDependant(project: Project) {
+            if (!map.containsKey(project.name)) {
+                children.add(project)
+                map[project.name] = project
+            }
         }
     }
 }
