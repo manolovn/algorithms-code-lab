@@ -2,6 +2,20 @@ package dev.manolovn.arrayofarrayproducts;
 
 public class ArrayOfArrayProducts {
 
+    /**
+     * Following the example:
+     *  input: [ 8, 10,  2]
+     * output: [20, 16, 80]
+     *
+     * The solution is make a two passes over the array to obtain O(n) + O(n) = O(n) complexity in time
+     * and avoiding a O(n^2) time complexity of a brute force solution.
+     * These two passes needs to be done in left-right order and right-left order and be aware of the indexes
+     * because we need to start from the index=1 in left-right traversing and from index=(len-1)-1 in
+     * right-left traversing
+     *
+     * Time:  O(n) ; because the two passes over the array in separated loops
+     * Space: O(1) ; because the changes are done in place
+     */
     static int[] arrayOfArrayProducts(int[] arr) {
         if (arr == null || arr.length <= 1) {
             return new int[]{};

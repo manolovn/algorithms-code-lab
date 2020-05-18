@@ -8,6 +8,7 @@ import org.junit.runners.Parameterized.Parameters;
 import java.util.Arrays;
 import java.util.Collection;
 
+import static dev.manolovn.arrayofarrayproducts.ArrayOfArrayProducts.arrayOfArrayProducts;
 import static org.junit.Assert.assertArrayEquals;
 
 @RunWith(Parameterized.class)
@@ -38,7 +39,6 @@ public class ArrayOfArrayProductsTest {
 
     @Test
     public void test() {
-        int[] output = ArrayOfArrayProducts.arrayOfArrayProducts(input);
-        assertArrayEquals(expected, output);
+        assertArrayEquals(expected, arrayOfArrayProducts(input));
     }
 }
