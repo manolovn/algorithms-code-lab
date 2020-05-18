@@ -9,4 +9,69 @@ The problems are extracted from different sources like Hackerrank, LeetCode, Gee
 
 ## Index
 
-TODO
+### Arrays
+- Array of array products
+- Binary sum
+- Busiest time in mall
+- Drone flight planner
+- Getting a different number
+- Matrix spiral copy
+- Merging 2 packages
+- Moves zeros to end
+- Pairs with specific difference
+- Time planner
+- Toeplitz matrix
+
+### Strings
+- Palindrome number
+- Staircase
+- Validate IP address
+- Word count
+
+### Stack
+- Bracket match
+- Sentence reverser
+
+### Binary search
+- Array index element equality
+- Find duplicates
+
+### Trees
+- BST successor search
+- Largest smaller BST key
+- Sales path
+
+### Graph
+- Pacific Atlantic water flow
+- Flower planting
+- Island count
+- Shortest cell path
+
+### Heap
+- K Messed array sort
+
+### Sorting
+- Pancake sort
+- Shifted array search
+
+### Dynamic Programming
+- Decrypt message
+- Decode variations
+- Deletion distance
+- Diff between two strings
+- Number of paths
+- Partition equal subset sum
+- Abbreviation
+
+### Recurssion
+- Flatten dictionary
+- H-Tree
+
+### Greedy algorithms
+- Award budget cuts
+
+### Other
+- Basic regex parser
+- Roman to integer
+- Root of number
+- Battleship board
