@@ -12,15 +12,15 @@ The problems are extracted from different sources like Hackerrank, LeetCode, Gee
 ### Arrays
 - [Array of array products](src/main/java/dev/manolovn/arrayofarrayproducts)
 - [Binary sum](src/main/java/dev/manolovn/binarysum)
-- Busiest time in mall
-- Drone flight planner
-- Getting a different number
-- Matrix spiral copy
-- Merging 2 packages
-- Moves zeros to end
-- Pairs with specific difference
-- Time planner
-- Toeplitz matrix
+- [Busiest time in mall](src/main/java/dev/manolovn/busiestmall)
+- [Drone flight planner](src/main/java/dev/manolovn/droneflightplanner)
+- [Getting a different number](src/main/java/dev/manolovn/gettingadifferentnumber)
+- [Matrix spiral copy](src/main/java/dev/manolovn/matrixspiralcopy)
+- [Merging 2 packages](src/main/java/dev/manolovn/merging2packages)
+- [Moves zeros to end](src/main/java/dev/manolovn/movezerostoend)
+- [Pairs with specific difference](src/main/java/dev/manolovn/pairswithspecificdifference)
+- [Time planner](src/main/java/dev/manolovn/timeplanner)
+- [Toeplitz matrix](src/main/java/dev/manolovn/toeplitzmatrix)
 
 ### Strings
 - Palindrome number
