@@ -10,8 +10,8 @@ The problems are extracted from different sources like Hackerrank, LeetCode, Gee
 ## Index
 
 ### Arrays
-- Array of array products
-- Binary sum
+- [Array of array products](src/main/java/dev/manolovn/arrayofarrayproducts)
+- [Binary sum](src/main/java/dev/manolovn/binarysum)
 - Busiest time in mall
 - Drone flight planner
 - Getting a different number
