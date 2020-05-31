@@ -1,5 +1,7 @@
 package dev.manolovn.countsequencestozero;
 
+import java.util.Arrays;
+
 /**
  * Write a function that, given an array A consisting of N integers, returns the number of fragments of A whose
  * sum equals 0 (that is, pairs (P,Q) such that P<=Q and the sum A[P] + A[P+1] + ... + A[Q] is 0)
@@ -19,7 +21,29 @@ package dev.manolovn.countsequencestozero;
  */
 public class CountSequencesToZero {
 
+    /**
+     *
+     */
     public static int sequenceCountToZero(int[] A) {
+        int[] dp = new int[A.length-1];
+        dp[0] = A[0];
+        return recursive(A, 1, dp, 0, 0);
+    }
 
+    private static int recursive(int[] A, int idx, int[] dp, int jdx, int count) {
+        if (idx >= A.length) return count;
+        if (A[idx] == 0) count += 1;
+        for (int i = 0; i <= jdx; i++) {
+            if (A[idx] + dp[i] == 0) count += 1;
+            if (i == jdx) {
+                dp[jdx++] = dp[i] + A[idx];
+                break;
+            }
+        }
+        return recursive(A, idx + 1, dp, jdx, count);
+    }
+
+    public static void main(String[] args) {
+        System.out.println(sequenceCountToZero(new int[]{2, -2, 3, 0, 4, -7}));
     }
 }
