@@ -1,7 +1,5 @@
 package dev.manolovn.countsequencestozero;
 
-import java.util.Arrays;
-
 /**
  * Write a function that, given an array A consisting of N integers, returns the number of fragments of A whose
  * sum equals 0 (that is, pairs (P,Q) such that P<=Q and the sum A[P] + A[P+1] + ... + A[Q] is 0)
