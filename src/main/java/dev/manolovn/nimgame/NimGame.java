@@ -16,7 +16,8 @@ package dev.manolovn.nimgame;
  * No matter 1, 2, or 3 stones you remove, the last stone will always be
  * removed by your friend.
  * <p>
- * source: leetcode
+ * source: https://leetcode.com/problems/nim-game
+ * difficulty: EASY
  */
 public class NimGame {
 
