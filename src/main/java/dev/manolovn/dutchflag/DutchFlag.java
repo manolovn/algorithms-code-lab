@@ -10,6 +10,10 @@ package dev.manolovn.dutchflag;
  */
 public class DutchFlag {
 
+    /**
+     * Time:  O(n)
+     * Space: O(1)
+     */
     public static void sort(int[] arr) {
         int left = 0;
         int right = arr.length - 1;
