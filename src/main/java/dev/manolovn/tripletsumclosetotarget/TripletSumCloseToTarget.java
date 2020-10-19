@@ -18,7 +18,8 @@ import java.util.Arrays;
 public class TripletSumCloseToTarget {
 
     /**
-     * Time: O(nlogn)
+     * Time:  O(nlogn) + O(n^2) = O(n^2)
+     * Space: O(n) this is the space needed to sort
      */
     public static int searchTriplet(int[] arr, int targetSum) {
         Arrays.sort(arr);
