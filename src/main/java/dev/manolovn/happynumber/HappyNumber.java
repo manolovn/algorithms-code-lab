@@ -5,9 +5,18 @@ import java.util.Set;
 
 /**
  * source: https://leetcode.com/problems/happy-number/
+ * difficulty: EASY
  */
 public class HappyNumber {
 
+    /**
+     * In this brute force approach we use an approach with a Set as "memory" of the previous calculations
+     * The final result in complexity terms is:
+     *
+     * Time:  O(n) ; where "n" is the number of steps needed to calculate the happy number or the length of the
+     *               cycle when the number is not happy
+     * Space: O(n)
+     */
     public boolean isHappy(int n) {
         Set<Integer> set = new HashSet<>(); // a set to detect cycles
         while (n != 1 && !set.contains(n)) {
