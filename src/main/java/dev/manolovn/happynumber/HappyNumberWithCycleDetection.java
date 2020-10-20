@@ -19,7 +19,7 @@ public class HappyNumberWithCycleDetection {
         while (fast != 1) {
             slow = calc(slow);
             fast = calc(calc(fast));
-            if (slow == fast) {
+            if (slow == fast && slow != 1) {
                 return false;
             }
         }
