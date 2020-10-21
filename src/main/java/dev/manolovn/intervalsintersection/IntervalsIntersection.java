@@ -41,7 +41,7 @@ class IntervalsIntersection {
             }
         }
 
-        return intervalsIntersection.toArray(new Interval[intervalsIntersection.size()]);
+        return intervalsIntersection.toArray(new Interval[0]);
     }
 
     static class Interval {
