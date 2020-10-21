@@ -6,6 +6,17 @@ import java.util.PriorityQueue;
 
 import static java.util.Comparator.comparingInt;
 
+/**
+ * Given a list of intervals representing the start and end time of ‘N’ meetings,
+ * find the minimum number of rooms required to hold all the meetings.
+ *
+ * Example:
+ * Meetings: [[1,4], [2,5], [7,9]]
+ * Output: 2
+ *
+ * Difficulty: HARD
+ * Topics: HEAPS + INTERVALS
+ */
 class MinimumMeetingRooms {
 
     /**
