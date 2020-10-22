@@ -4,13 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * We are given an unsorted array containing ‘n+1’ numbers taken from the range 1 to ‘n’.
- * The array has only one duplicate but it can be repeated multiple times.
- * Find that duplicate number without using any extra space. You are, however, allowed to modify the input array.
+ * We are given an unsorted array containing numbers taken from the range 1 to ‘n’. The array can have duplicates,
+ * which means some numbers will be missing. Find all those missing numbers.
  *
  * Example:
- * Input: [1, 4, 4, 3, 2]
- * Output: 4
+ * Input: [2, 3, 1, 8, 2, 3, 5, 1]
+ * Output: 4, 6, 7
+ * Explanation: The array should have all numbers from 1 to 8, due to duplicates 4, 6, and 7 are missing.
  *
  * Difficulty: EASY
  * Topics: ARRAYS + CYCLIC SORT
