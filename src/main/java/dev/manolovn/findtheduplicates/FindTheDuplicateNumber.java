@@ -11,6 +11,10 @@ package dev.manolovn.findtheduplicates;
  */
 public class FindTheDuplicateNumber {
 
+    /**
+     * Time:  O(n)
+     * Space: O(1)
+     */
     public static int findNumber(int[] nums) {
         int i = 0;
         while (i < nums.length) {
