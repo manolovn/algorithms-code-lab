@@ -13,8 +13,8 @@ import java.util.List;
 class FindAllTreePathSum {
 
     /**
-     * Time:  O(n)
-     * Space: O(1)
+     * Time:  O(n^2) ; due to we need to traverse every node and store every path
+     * Space: O(n) ; due to the recursion stack
      */
     public static List<List<Integer>> findPaths(TreeNode root, int sum) {
         List<List<Integer>> allPaths = new ArrayList<>();
