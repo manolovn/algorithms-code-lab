@@ -15,8 +15,8 @@ import java.util.List;
 public class FindSubsets {
 
     /**
-     * Time:  O(n^2)
-     * Space: O(1) ; because the output collection is a requirement of the problem
+     * Time:  O(n2^n)
+     * Space: O(n2^n)
      */
     public static List<List<Integer>> findSubsets(int[] nums) {
         List<List<Integer>> subsets = new ArrayList<>();
