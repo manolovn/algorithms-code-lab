@@ -6,6 +6,7 @@ import java.util.PriorityQueue;
  * source: https://leetcode.com/problems/k-closest-points-to-origin
  * difficulty: MEDIUM
  * topics: HEAP
+ * info: https://leetcode.com/problems/k-closest-points-to-origin/discuss/220235/Java-Three-solutions-to-this-classical-K-th-problem.
  */
 public class KClosestPoints {
 
