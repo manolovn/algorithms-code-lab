@@ -1,5 +1,6 @@
 package dev.manolovn.medianstreamnumber;
 
+import java.util.Comparator;
 import java.util.PriorityQueue;
 
 /**
@@ -16,7 +17,7 @@ import java.util.PriorityQueue;
 public class MedianOfAStream {
 
     PriorityQueue<Integer> maxHeap = new PriorityQueue<>((a,b) -> b - a);
-    PriorityQueue<Integer> minHeap = new PriorityQueue<>((a, b) -> a - b);
+    PriorityQueue<Integer> minHeap = new PriorityQueue<>(Comparator.comparingInt(a -> a));
 
     /**
      * Time:  O(logn) ; due to heap insertion
