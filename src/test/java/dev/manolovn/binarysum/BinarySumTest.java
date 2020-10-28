@@ -21,9 +21,9 @@ public class BinarySumTest {
         });
     }
 
-    private String input;
-    private String input2;
-    private String expected;
+    private final String input;
+    private final String input2;
+    private final String expected;
 
     public BinarySumTest(String input, String input2, String expected) {
         this.input = input;
