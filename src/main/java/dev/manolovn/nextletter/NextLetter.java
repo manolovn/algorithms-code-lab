@@ -19,7 +19,7 @@ public class NextLetter {
 
     /**
      * Time:  O(logn)
-     * Spcae: O(1)
+     * Space: O(1)
      */
     public static char searchNextLetter(char[] letters, char key) {
         int n = letters.length;
