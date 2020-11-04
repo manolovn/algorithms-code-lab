@@ -61,9 +61,7 @@ public class EqualSubsetSumPartition {
      */
     public boolean canPartition_alt(int[] num) {
         int sum = 0;
-        for (int n : num) {
-            sum += n;
-        }
+        for (int n : num) sum += n;
         if (sum % 2 != 0) return false;
         sum /= 2;
 
