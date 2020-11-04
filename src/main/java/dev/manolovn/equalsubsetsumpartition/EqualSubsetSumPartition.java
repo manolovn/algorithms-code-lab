@@ -2,12 +2,12 @@ package dev.manolovn.equalsubsetsumpartition;
 
 /**
  * Given a set of positive numbers, find if we can partition it into two subsets such that the sum of elements in both subsets is equal.
- *
+ * <p>
  * Example:
  * Input: {1, 2, 3, 4}
  * Output: True
  * Explanation: The given set can be partitioned into two subsets with equal sum: {1, 4} & {2, 3}
- *
+ * <p>
  * difficulty: MEDIUM
  * topics: DYNAMIC PROGRAMMING
  */
@@ -23,7 +23,7 @@ public class EqualSubsetSumPartition {
         for (int j : num) sum += j;
 
         // if 'sum' is a an odd number, we can't have two subsets with same total
-        if(sum % 2 != 0)
+        if (sum % 2 != 0)
             return false;
 
         // we are trying to find a subset of given numbers that has a total sum of ‘sum/2’.
@@ -32,27 +32,59 @@ public class EqualSubsetSumPartition {
         boolean[][] dp = new boolean[n][sum + 1];
 
         // populate the sum=0 columns, as we can always for '0' sum with an empty set
-        for(int i=0; i < n; i++)
+        for (int i = 0; i < n; i++)
             dp[i][0] = true;
 
         // with only one number, we can form a subset only when the required sum is equal to its value
-        for(int s=1; s <= sum ; s++) {
+        for (int s = 1; s <= sum; s++) {
             dp[0][s] = (num[0] == s);
         }
 
         // process all subsets for all sums
-        for(int i=1; i < n; i++) {
-            for(int s=1; s <= sum; s++) {
+        for (int i = 1; i < n; i++) {
+            for (int s = 1; s <= sum; s++) {
                 // if we can get the sum 's' without the number at index 'i'
-                if(dp[i-1][s]) {
-                    dp[i][s] = dp[i-1][s];
+                if (dp[i - 1][s]) {
+                    dp[i][s] = dp[i - 1][s];
                 } else if (s >= num[i]) { // else if we can find a subset to get the remaining sum
-                    dp[i][s] = dp[i-1][s-num[i]];
+                    dp[i][s] = dp[i - 1][s - num[i]];
                 }
             }
         }
 
         // the bottom-right corner will have our answer.
-        return dp[n-1][sum];
+        return dp[n - 1][sum];
+    }
+
+    /**
+     * alternative version of the previous implementation, same complexity
+     */
+    public boolean canPartition_alt(int[] num) {
+        int sum = 0;
+        for (int n : num) {
+            sum += n;
+        }
+        if (sum % 2 != 0) return false;
+        sum /= 2;
+
+        boolean[][] dp = new boolean[num.length + 1][sum + 1];
+
+        for (int i = 0; i <= num.length; i++) {
+            for (int j = 0; j <= sum; j++) {
+                boolean curr;
+                if (i == 0 || j == 0) {
+                    curr = false;
+                } else if (num[i - 1] > j) {
+                    curr = dp[i - 1][j];
+                } else if (num[i - 1] == j) {
+                    curr = true;
+                } else {
+                    curr = dp[i - 1][j] || dp[i - 1][j - num[i - 1]];
+                }
+                dp[i][j] = curr;
+            }
+        }
+
+        return dp[num.length][sum];
     }
 }
