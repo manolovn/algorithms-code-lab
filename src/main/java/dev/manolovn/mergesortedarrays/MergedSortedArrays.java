@@ -27,11 +27,10 @@ public class MergedSortedArrays {
     #3 : heap approach
     Time:  O((m+n)logn)
     Space: O(n)
-
     */
     public void merge(int[] nums1, int m, int[] nums2, int n) {
-        int r1 = m-1;
-        int r2 = n-1;
+        int r1 = m - 1;
+        int r2 = n - 1;
         int w = nums1.length - 1;
 
         while (r1 >= 0 && r2 >= 0) {
