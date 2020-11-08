@@ -30,4 +30,24 @@ public class MoveZerosToEnd {
 
         return solution;
     }
+
+    /**
+     * Alternative solution with in-place modifications
+     */
+    static int[] moveZeroes(int[] nums) {
+        int w = 0;
+        int r = 0;
+        while (w < nums.length || r < nums.length) {
+            if (r < nums.length && nums[r] != 0) {
+                nums[w] = nums[r];
+                w++;
+            }
+            if (r >= nums.length) {
+                nums[w] = 0;
+                w++;
+            }
+            r++;
+        }
+        return nums;
+    }
 }
