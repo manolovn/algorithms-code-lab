@@ -5,7 +5,7 @@ public class IslandPerimeter {
     /*
     The approach is to traverse the island and count the perimeter following the next rule:
     - perimiter count on every cell is equal to the 4 - (number of visitable neighbors);
-    so when I have 4 visitable neighbors, perimiter count is 0 and when I have only one
+    so when I have 4 visitable neighbors, perimeter count is 0 and when I have only one
     visitable neighbor is 3,... and so on
     - it's important to take into account that it's necessary to modify the grid to mark
     visited nodes. In this case, a visited node will have the value of 2
