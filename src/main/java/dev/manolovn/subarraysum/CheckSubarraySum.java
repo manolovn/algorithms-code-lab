@@ -13,7 +13,7 @@ public class CheckSubarraySum {
     Math behind the approach:
     a % k = x
     b % k = x
-    (a - b) % k = x -x = 0
+    (a - b) % k = x - x = 0
     here a - b = the sum between i and j.
     ---
     [23, 2, 4, 6, 7],  k=6
