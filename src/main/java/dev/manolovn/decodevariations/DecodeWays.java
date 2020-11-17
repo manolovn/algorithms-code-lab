@@ -1,4 +1,4 @@
-package dev.manolovn.decodeways;
+package dev.manolovn.decodevariations;
 
 /**
  * source: https://leetcode.com/problems/decode-ways/
