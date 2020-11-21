@@ -8,6 +8,7 @@ package dev.manolovn.removeduplicates;
  * Input: [2, 3, 3, 3, 6, 9, 9]
  * Output: 4
  *
+ * source: https://leetcode.com/problems/remove-duplicates-from-sorted-array/
  * Difficulty: EASY
  * Topics: ARRAYS + TWO POINTERS
  */
