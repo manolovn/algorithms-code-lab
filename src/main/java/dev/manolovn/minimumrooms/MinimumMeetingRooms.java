@@ -1,6 +1,5 @@
 package dev.manolovn.minimumrooms;
 
-import java.util.Comparator;
 import java.util.List;
 import java.util.PriorityQueue;
 
@@ -14,8 +13,9 @@ import static java.util.Comparator.comparingInt;
  * Meetings: [[1,4], [2,5], [7,9]]
  * Output: 2
  *
- * Difficulty: HARD
- * Topics: HEAPS + INTERVALS
+ * source: https://leetcode.com/problems/meeting-rooms-ii/
+ * difficulty: MEDIUM
+ * topics: HEAPS + INTERVALS
  */
 class MinimumMeetingRooms {
 
