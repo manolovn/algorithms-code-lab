@@ -5,7 +5,7 @@ import java.util.Arrays;
 /**
  * source: https://leetcode.com/problems/meeting-rooms/
  * difficulty: EASY
- * topic: INTERVALSS
+ * topic: INTERVALS
  */
 public class CanAttendMeetings {
 
