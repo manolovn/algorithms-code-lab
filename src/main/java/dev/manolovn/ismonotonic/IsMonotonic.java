@@ -38,4 +38,21 @@ public class IsMonotonic {
         }
         return true;
     }
+
+    /**
+     * alternative solution
+     * Time:  O(n)
+     * Space: O(1)
+     */
+    public boolean isMonotonic_alt(int[] A) {
+        boolean dec = true;
+        boolean asc = true;
+
+        for (int i = 1; i < A.length; i++) {
+            if (A[i - 1] > A[i]) asc = false;
+            if (A[i - 1] < A[i]) dec = false;
+        }
+
+        return dec || asc;
+    }
 }
