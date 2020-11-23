@@ -1,5 +1,7 @@
 package dev.manolovn.addtwonumbers;
 
+import dev.manolovn.common.ListNode;
+
 /**
  * source: https://leetcode.com/problems/add-two-numbers/
  * difficulty: MEDIUM
@@ -41,14 +43,5 @@ public class AddTwoNumbers {
         }
 
         return solution.next;
-    }
-
-    public class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
     }
 }
