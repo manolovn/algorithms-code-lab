@@ -22,9 +22,8 @@ public class LongestSubstringKDifferentChars {
      * Space: O(k) ; due to the frequency map size
      */
     public static int findLength(String str, int k) {
-        if (str == null || str.isEmpty() || k > str.length()) {
-            return 0; // not possible
-        }
+        if (str == null || str.isEmpty() || k > str.length()) return 0; // not possible
+
         int maxLen = 0;
         int start = 0;
         Map<Character, Integer> fMap = new HashMap<>();
