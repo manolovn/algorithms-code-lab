@@ -2,6 +2,10 @@ package dev.manolovn.awardbudgetcuts;
 
 import java.util.Arrays;
 
+/**
+ * difficulty: HARD
+ * topic: GREEDY
+ */
 public class AwardBudgetCuts {
 
     /*
