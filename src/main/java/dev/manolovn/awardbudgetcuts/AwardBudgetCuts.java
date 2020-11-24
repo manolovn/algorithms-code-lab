@@ -29,4 +29,16 @@ public class AwardBudgetCuts {
         }
         return cup;
     }
+
+    static double findGrantsCap_alternative(double[] grantsArray, double newBudget) {
+        Arrays.sort(grantsArray);
+        double len = grantsArray.length;
+        double acc = 0;
+        for (int i = 0; i < grantsArray.length; i++) {
+            if ((newBudget - acc) / (len - i) <= grantsArray[i])
+                return (newBudget - acc) / (len - i);
+            acc += grantsArray[i];
+        }
+        return newBudget / len;
+    }
 }
