@@ -1,5 +1,7 @@
 package dev.manolovn.palindromelinkedlist;
 
+import dev.manolovn.common.ListNode;
+
 /**
  * Given a singly linked list, determine if it is a palindrome.
  *
@@ -80,22 +82,5 @@ public class PalindromeLinkedList {
             curr = next;
         }
         return prev;
-    }
-
-    public static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode() {
-        }
-
-        ListNode(int val) {
-            this.val = val;
-        }
-
-        ListNode(int val, ListNode next) {
-            this.val = val;
-            this.next = next;
-        }
     }
 }
