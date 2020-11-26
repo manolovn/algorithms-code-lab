@@ -12,18 +12,18 @@ public class ReverseWords {
      * Space: O(n)
      */
     public String reverseWords(String s) {
-        int end = s.length() - 1;
+        int end;
         StringBuilder sb = new StringBuilder();
 
         for (int i = s.length() - 1; i >= 0; i--) {
             if (s.charAt(i) != ' ') {
                 end = i;
-                i = s.lastIndexOf(' ', end);
-                sb.append(s, i + 1, end + 1).append(' ');
+                i = s.lastIndexOf(' ', end); // O(n)
+                sb.append(s, i + 1, end + 1).append(' '); // O(1)
             }
         }
 
-        return sb.substring(0, sb.length() - 1);
+        return sb.substring(0, sb.length() - 1); // O(n)
     }
 
     /**
