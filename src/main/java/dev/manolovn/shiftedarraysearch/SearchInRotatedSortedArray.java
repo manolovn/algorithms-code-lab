@@ -54,4 +54,30 @@ public class SearchInRotatedSortedArray {
         }
         return -1;
     }
+
+    /**
+     * Alternative solution with just one pass
+     * Time:  O(logn)
+     * Space: O(1)
+     */
+    public int search_onePassAlt(int[] nums, int target) {
+        if (nums.length == 0) return -1;
+        if (nums.length == 1) return nums[0] == target ? 0 : -1;
+
+        int lo = 0;
+        int hi = nums.length - 1;
+        while (lo <= hi) {
+            int mid = lo + (hi - lo) / 2;
+            if (nums[mid] == target) {
+                return mid;
+            } else if (nums[mid] >= nums[lo]) {
+                if (target >= nums[lo] && target < nums[mid]) hi = mid - 1;
+                else lo = mid + 1;
+            } else {
+                if (target <= nums[hi] && target > nums[mid]) lo = mid + 1;
+                else hi = mid - 1;
+            }
+        }
+        return -1;
+    }
 }
