@@ -13,7 +13,7 @@ import java.util.Queue;
  * Difficulty: MEDIUM
  * Topic: LINKED LIST + BFS
  */
-class ZigzagTraversal {
+class ZigZagTraversal {
 
     /**
      * Time:  O(n)
