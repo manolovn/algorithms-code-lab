@@ -12,8 +12,6 @@ public class FindPeakElement {
 
     t: O(log2n)
     s: O(log2n)
-
-    note: try interative implementation to improve space to O(1)
     */
     public int findPeakElement(int[] nums) {
         return binarySearch(nums, 0, nums.length - 1);
@@ -25,5 +23,22 @@ public class FindPeakElement {
         if (nums[mid] < nums[mid + 1])
             return binarySearch(nums, mid + 1, hi);
         return binarySearch(nums, lo, mid);
+    }
+
+    /**
+     * Alternative solution with improved space complexity
+     * Time:  O(log2n)
+     * Space: O(1)
+     */
+    public int findPeakElement_alt(int[] nums) {
+        int lo = 0;
+        int hi = nums.length - 1;
+        while (lo < hi) {
+            int mid = (lo + hi) / 2;
+            if (nums[mid] < nums[mid + 1])
+                lo = mid + 1;
+            else hi = mid;
+        }
+        return hi;
     }
 }
