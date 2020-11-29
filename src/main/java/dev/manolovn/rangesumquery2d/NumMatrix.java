@@ -14,6 +14,11 @@ public class NumMatrix {
      * So when we need to calculate the sum from (A,B) to (C,D) it will
      * sum(ABCD) = sum(0,D) - sum(0,B) - sum(OC) + sum(0A)
      *
+     * 0 . . . . . .
+     * . . A B . . .
+     * . . C D . . .
+     * . . . . . . .
+     *
      * Time:  O(1)
      * Space: O(m*n)
      */
