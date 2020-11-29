@@ -1,12 +1,16 @@
 package dev.manolovn.minbinarytreeheight;
 
+import dev.manolovn.common.TreeNode;
+
 import java.util.LinkedList;
 import java.util.Queue;
 
 /**
+ * source: https://leetcode.com/problems/minimum-depth-of-binary-tree/
+ * <p>
  * Find the minimum depth of a binary tree. The minimum depth is the number of nodes
  * along the shortest path from the root node to the nearest leaf node
- *
+ * <p>
  * Difficulty: EASY
  * Topics: BFS
  */
@@ -37,15 +41,5 @@ class MinimumBinaryTreeHeight {
             }
         }
         return minHeight;
-    }
-
-    static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
     }
 }
