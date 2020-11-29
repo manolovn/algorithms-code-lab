@@ -1,5 +1,8 @@
 package dev.manolovn.sumroottoleaf;
 
+import dev.manolovn.common.TreeNode;
+import kotlin.Pair;
+
 import java.util.ArrayDeque;
 import java.util.Deque;
 
@@ -24,8 +27,8 @@ public class SumRootToLeaf {
 
         while (!stack.isEmpty()) {
             Pair<TreeNode, Integer> p = stack.pop();
-            root = p.key;
-            current = p.value;
+            root = p.getFirst();
+            current = p.getSecond();
 
             if (root != null) {
                 current = current * 10 + root.val;
@@ -39,27 +42,5 @@ public class SumRootToLeaf {
         }
 
         return result;
-    }
-
-    public static class Pair<K, V> {
-        K key;
-        V value;
-
-        Pair(K key, V value) {
-            this.key = key;
-            this.value = value;
-        }
-    }
-
-    public static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int val, TreeNode left, TreeNode right) {
-            this.val = val;
-            this.left = left;
-            this.right = right;
-        }
     }
 }
