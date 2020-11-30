@@ -33,7 +33,7 @@ class MinimumMeetingRooms {
         PriorityQueue<Meeting> minHeap = new PriorityQueue<>(meetings.size(), comparingInt(a -> a.end));
         for (Meeting m : meetings) {
             while (!minHeap.isEmpty() && m.start >= minHeap.peek().end) { // O(1)
-                minHeap.poll(); // O(1)
+                minHeap.poll(); // O(logn)
             }
             minHeap.offer(m); // O(logn)
             rooms = Math.max(rooms, minHeap.size());
