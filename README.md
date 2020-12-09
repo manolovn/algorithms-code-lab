@@ -5,7 +5,7 @@ related to improve software development and problem solving skills. Some topics 
 Sorting algorithms, Array manipulation, Dictionaries and Hashmaps, String manipulation, Greedy algorithms, Search
 algorithms, Dynamic programming, Stack and Queues, Graphs, Trees, Linked Lists, Recursion and Backtracking.
 
-The problems are extracted from different sources like Hackerrank, LeetCode, GeeksForGeeks,...
+The problems are extracted from different sources like Hackerrank, LeetCode, GeeksForGeeks, Pramp,...
 
 ## Index
 
