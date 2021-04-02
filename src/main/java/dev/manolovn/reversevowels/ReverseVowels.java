@@ -29,16 +29,13 @@ public class ReverseVowels {
             boolean lVowel = isVowel(chars[l]);
             boolean rVowel = isVowel(chars[r]);
 
-            if (lVowel && rVowel) {
+            if (!lVowel) l++;
+            else if (!rVowel) r--;
+            else {
                 swap(chars, l, r);
-            } else if (rVowel) {
-                r++;
-            } else if (lVowel) {
-                l--;
+                l++;
+                r--;
             }
-
-            l++;
-            r--;
         }
 
         return String.valueOf(chars);
