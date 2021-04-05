@@ -1,5 +1,7 @@
 package dev.manolovn.treediameter;
 
+import dev.manolovn.common.TreeNode;
+
 /**
  * source: https://leetcode.com/problems/diameter-of-binary-tree/
  * Given a binary tree, find the length of its diameter.
@@ -29,15 +31,5 @@ class TreeDiameter {
         int r = dfs(node.right);
         max = Math.max(max, l + r + 1);
         return Math.max(l, r) + 1;
-    }
-
-    static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
     }
 }
