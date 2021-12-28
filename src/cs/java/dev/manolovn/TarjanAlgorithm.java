@@ -1,4 +1,4 @@
-package dev.manolovn.commons;
+package dev.manolovn;
 
 import java.util.*;
 

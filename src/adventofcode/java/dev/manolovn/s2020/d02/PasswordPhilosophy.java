@@ -51,7 +51,7 @@ public class PasswordPhilosophy {
         }
 
         public static Record fromRaw(String line) {
-
+            return null;
         }
     }
 
