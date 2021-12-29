@@ -34,7 +34,7 @@ public class PasswordPhilosophy {
      * How many passwords are valid according to their policies?
      */
     public static int part1(List<String> lines) {
-
+        return 0;
     }
 
     static class Record {
