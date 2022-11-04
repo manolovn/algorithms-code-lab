@@ -21,20 +21,23 @@ public class ReverseVowels {
     Space: O(1) ; the space needed is constant
     */
     public String reverseVowels(String s) {
+        int i = 0;
+        int j = s.length() - 1;
         char[] chars = s.toCharArray();
-        int l = 0; // left side pointer
-        int r = s.length() - 1; // right side pointer
 
-        while (l < r) {
-            boolean lVowel = isVowel(chars[l]);
-            boolean rVowel = isVowel(chars[r]);
-
-            if (!lVowel) l++;
-            else if (!rVowel) r--;
-            else {
-                swap(chars, l, r);
-                l++;
-                r--;
+        while (i < j) {
+            // find the leftmost vowel
+            while (i < s.length() && !isVowel(chars[i])) {
+                i++;
+            }
+            // find the rightmost vowel
+            while (j >= 0 && !isVowel(chars[j])) {
+                j--;
+            }
+            if (i < j) {
+                swap(chars, i, j);
+                i++;
+                j--;
             }
         }
 
@@ -42,13 +45,12 @@ public class ReverseVowels {
     }
 
     private boolean isVowel(char c) {
-        return c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U'
-                || c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u';
+        return "aAeEiIoOuU".indexOf(c) >= 0;
     }
 
-    private void swap(char[] chars, int l, int r) {
-        char temp = chars[l];
-        chars[l] = chars[r];
-        chars[r] = temp;
+    private void swap(char[] chars, int i, int j) {
+        char temp = chars[j];
+        chars[j] = chars[i];
+        chars[i] = temp;
     }
 }
